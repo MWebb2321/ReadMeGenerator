@@ -1,6 +1,8 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 
+const writeFileAsync = util.promisify(fs.writeFile);
+
 const questions = [
     {
         type: "input",
@@ -45,3 +47,28 @@ const questions = [
         name: "email"
     },
 ]
+
+const promptUser = () => {
+    return inquirer
+        .prompt(questions);
+}
+
+const writeToFile = (fileName, data) => {
+    return writeFileAsync(fileName, data);
+}
+
+const init = async () => {
+    try {
+        console.log("Welcome to ReadMe Generator" + "Please answer these questions:")
+
+        const answers = await promptUser();
+        const fileContent = generateMd(answers);
+        await writeToFile("./output/ReadMe.md", fileContent);
+        console.log("ReadMe.md created in output folder.");
+    } catch (err) {
+        console.error("Error creating README. File not created.");
+        console.log(err);
+    }
+}
+
+init();
