@@ -1,7 +1,8 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
+const generateMd = require("./generateMd");
 
-const writeFileAsync = util.promisify(fs.writeFile);
+//onst writeFileAsync = util.promisify(fs.writeFile);
 
 const questions = [
     {
@@ -46,6 +47,11 @@ const questions = [
         message: "What is your email address?",
         name: "email"
     },
+    {
+        type: "confirm",
+        message: "Include MIT license?",
+        name: "license"
+    }
 ]
 
 const promptUser = () => {
@@ -53,17 +59,19 @@ const promptUser = () => {
         .prompt(questions);
 }
 
-const writeToFile = (fileName, data) => {
-    return writeFileAsync(fileName, data);
-}
-
 const init = async () => {
     try {
         console.log("Welcome to ReadMe Generator" + "Please answer these questions:")
 
         const answers = await promptUser();
+        if (answers.license) {
+            answers.license = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
+        } else {answers.license = ""}
+        console.log(answers)
         const fileContent = generateMd(answers);
-        await writeToFile("./output/ReadMe.md", fileContent);
+        fs.writeFile("./output/ReadMe.md", fileContent, (err) => {
+            if (err)throw err;
+        });
         console.log("ReadMe.md created in output folder.");
     } catch (err) {
         console.error("Error creating README. File not created.");

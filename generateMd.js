@@ -1,11 +1,9 @@
-const licenseBadgeLinks = require(".licenseBadges");
+//const licenseBadgeLinks = require(".licenseBadges");
 
 function generateMarkdown(data) {
-    licenseBadge = licenseBadgeLinks[data.license];
-    return `# ${data.title}`
-
-return `${data.licenseBadge}
-
+    // licenseBadge = licenseBadgeLinks[data.license];
+    return `# ${data.title}
+    
 ## Desciption
 
 ${data.description}
@@ -19,5 +17,25 @@ ${data.description}
 * [Questions](#questions)
 
 ## Installation
+    ${data.installation}
 
-To install dependencies, run this:
+## Usage
+    ${data.usage}
+
+## License
+    ${data.license}
+
+## Contribute
+    ${data.contribute}
+    
+## Testing
+    ${data.testing}
+
+## Questions
+    Any comments, questions, concerns, you should just deal with it
+
+`
+}
+
+// To install dependencies, run this:
+module.exports = generateMarkdown;
