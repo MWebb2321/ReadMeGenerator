@@ -11,9 +11,9 @@ ${data.description}
 ## Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
-* [License](#license)
 * [Contribution](#contributing)
 * [Testing](#tests)
+* [License](#license)
 * [Questions](#questions)
 
 ## Installation
@@ -32,10 +32,9 @@ ${data.description}
     ${data.testing}
 
 ## Questions
-    Any comments, questions, concerns, you should just deal with it
+    Any comments, questions, concerns? Feel free to contact me at [${data.email}](maito:${data.email}). 
 
 `
 }
 
-// To install dependencies, run this:
 module.exports = generateMarkdown;

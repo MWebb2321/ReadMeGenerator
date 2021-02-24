@@ -38,6 +38,11 @@ const questions = [
         default: "npm run test"
     },
     {
+        type: "confirm",
+        message: "Include MIT license?",
+        name: "license"
+    },
+    {
         type: "input",
         message: "What is your GitHub user name?",
         name: "username"
@@ -47,11 +52,6 @@ const questions = [
         message: "What is your email address?",
         name: "email"
     },
-    {
-        type: "confirm",
-        message: "Include MIT license?",
-        name: "license"
-    }
 ]
 
 const promptUser = () => {
