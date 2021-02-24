@@ -1,32 +1,32 @@
-# Kickass
+# ReadMe Generator
     
 ## Desciption
 
-To save the world
+To use node.js in creating a ReadMe template for a ReadMe assignment
 
 ## Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
-* [License](#license)
 * [Contribution](#contributing)
 * [Testing](#tests)
+* [License](#license)
 * [Questions](#questions)
 
 ## Installation
     npm i
 
 ## Usage
-    Everything
+    This repository is just for demontration purposes only
 
 ## License
     [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Contribute
-    Do it often
+    This repository is for demonstration purposes only
     
 ## Testing
     undefined
 
 ## Questions
-    undefined
+    Any comments, questions, concerns? Feel free to contact me at [mwebb2321@gmail.com](maito:mwebb2321@gmail.com). 
 

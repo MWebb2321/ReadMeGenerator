@@ -23,7 +23,7 @@ ${data.description}
     ${data.usage}
 
 ## License
-    ${data.license}
+    This respository is licensed under the ${data.license} license.
 
 ## Contribute
     ${data.contribute}
