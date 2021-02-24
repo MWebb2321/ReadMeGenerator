@@ -5,13 +5,12 @@ function generateMarkdown(data) {
     return `# ${data.title}
     
 ## Desciption
-
 ${data.description}
 
 ## Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
-* [Contribution](#contributing)
+* [Contribution](#contribute)
 * [Testing](#tests)
 * [License](#license)
 * [Questions](#questions)

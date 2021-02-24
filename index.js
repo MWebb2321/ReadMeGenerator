@@ -65,7 +65,7 @@ const init = async () => {
 
         const answers = await promptUser();
         if (answers.license) {
-            answers.license = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
+            answers.license = "[!(https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
         } else {answers.license = ""}
         console.log(answers)
         const fileContent = generateMd(answers);
