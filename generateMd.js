@@ -33,7 +33,7 @@ ${data.description}
 
 ## Questions
     Any comments, questions, concerns? Feel free to contact me at [${data.email}](maito:${data.email}). 
-
+    My gitHub profile is [${data.username}], (https://github.com/${data.username})
 `
 }
 
