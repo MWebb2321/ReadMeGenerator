@@ -2,8 +2,6 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const generateMd = require("./generateMd");
 
-//onst writeFileAsync = util.promisify(fs.writeFile);
-
 const questions = [
     {
         type: "input",
